@@ -1,6 +1,5 @@
 require boxen::environment
 require homebrew
-# require gcc
 
 Exec {
   group       => 'staff',
@@ -104,7 +103,7 @@ node default {
   include osx::no_network_dsstores
   include osx::software_update
   class { 'osx::global::key_repeat_delay':
-    delay => 0
+    delay => 15
   }
   class { 'osx::global::key_repeat_rate':
     rate => 2
